@@ -2,8 +2,6 @@
 
 This document outlines a series of topics designed to understand key concepts in Machine Learning and Artificial Intelligence, with a focus on Large Language Models (LLMs) and their practical applications and governance.
 
-Test
-
 ---
 ## Introduction to Machine Learning Models & Architectures
 
