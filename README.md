@@ -2,6 +2,13 @@
 
 This document outlines a series of topics designed to understand key concepts in Machine Learning and Artificial Intelligence, with a focus on Large Language Models (LLMs) and their practical applications and governance.
 
+The core concepts include:
+1. [Introduction to Machine Learning Models & Architectures](#introduction-to-machine-learning-models--architectures)
+2. [Deep Dive into Transformers & LLM Architectures](#deep-dive-into-transformers--llm-architectures)
+3. [Prompt Engineering, RAG & Agentic AI](#prompt-engineering-rag--agentic-ai)
+4. [AI Governance, Risks, & Data Security](#ai-governance-risks--data-security)
+
+
 ---
 ## Introduction to Machine Learning Models & Architectures
 
@@ -126,14 +133,25 @@ This section transitions into deep learning, focusing on the Transformer archite
 
 ---
 
-## RAG, Prompt Engineering, & Agentic AI
+## Prompt Engineering, RAG, & Agentic AI
 
 ### Overview
 This section covers how LLMs can be augmented for more accurate and relevant responses (RAG), the art of crafting effective prompts, and the emerging field of Agentic AI.
 
 ### Content
 
-#### 1. Retrieval Augmented Generation (RAG)
+#### 1. Prompt Engineering
+*   **Definition:** Prompt engineering is the discipline of designing, refining, and optimizing the inputs (prompts) given to Large Language Models to guide their behavior and elicit desired, high-quality, and relevant outputs.
+*   **Key Principles & Techniques:**
+    *   **Clarity & Specificity:** Clearly state the task, desired output format, and any constraints. Avoid ambiguity.
+    *   **Role-Playing:** Instruct the LLM to adopt a specific persona (e.g., "Act as a financial analyst," "You are a customer support agent").
+    *   **Few-Shot Learning:** Provide one or more examples of input-output pairs within the prompt to demonstrate the desired pattern, style, or format.
+    *   **Chain-of-Thought Prompting:** Encourage the model to break down complex problems into intermediate steps, showing its reasoning process before providing the final answer. This improves accuracy for complex queries.
+    *   **Output Format Specification:** Explicitly ask for output in JSON, bullet points, markdown, etc.
+    *   **Temperature & Top-P:** Parameters that control the randomness and diversity of the model's output. Lower temperature leads to more deterministic outputs, higher to more creative ones.
+*   **Reference Link:** For more on prompt engineering, see Tina Huang's AI Prompt Guide: [Prompt Guide](https://paltech0.sharepoint.com/sites/AIAdoption/SitePages/AI-Concepts.aspx#prompt-engineering)
+
+#### 2. Retrieval Augmented Generation (RAG)
 *   **The Problem:** Large Language Models, while powerful, can sometimes "hallucinate" (generate factually incorrect information) or lack up-to-date knowledge beyond their training data cutoff.
 *   **RAG Solution:** Retrieval Augmented Generation (RAG) is a technique that enhances LLMs by integrating them with external, up-to-date, and authoritative knowledge bases. Instead of solely relying on their internal parameters, LLMs can retrieve relevant information before generating a response.
 *   **Key Components:**
@@ -147,16 +165,7 @@ This section covers how LLMs can be augmented for more accurate and relevant res
         5.  **Augmented Generation:** The LLM generates a response, *augmented* by the provided factual context, reducing hallucinations and providing more accurate, relevant, and traceable answers.
 *   **Hugging Face Platform:** A prominent open-source platform providing a vast repository of pre-trained models (including many for embeddings and LLMs), datasets, and tools that facilitate the development and deployment of NLP and RAG applications.
 
-#### 2. Prompt Engineering
-*   **Definition:** Prompt engineering is the discipline of designing, refining, and optimizing the inputs (prompts) given to Large Language Models to guide their behavior and elicit desired, high-quality, and relevant outputs.
-*   **Key Principles & Techniques:**
-    *   **Clarity & Specificity:** Clearly state the task, desired output format, and any constraints. Avoid ambiguity.
-    *   **Role-Playing:** Instruct the LLM to adopt a specific persona (e.g., "Act as a financial analyst," "You are a customer support agent").
-    *   **Few-Shot Learning:** Provide one or more examples of input-output pairs within the prompt to demonstrate the desired pattern, style, or format.
-    *   **Chain-of-Thought Prompting:** Encourage the model to break down complex problems into intermediate steps, showing its reasoning process before providing the final answer. This improves accuracy for complex queries.
-    *   **Output Format Specification:** Explicitly ask for output in JSON, bullet points, markdown, etc.
-    *   **Temperature & Top-P:** Parameters that control the randomness and diversity of the model's output. Lower temperature leads to more deterministic outputs, higher to more creative ones.
-*   **Reference Link:** For more on prompt engineering, see Tina Huang's AI Prompt Guide: [Prompt Guide](https://paltech0.sharepoint.com/sites/AIAdoption/SitePages/AI-Concepts.aspx#prompt-engineering)
+
 
 
 #### 3. Agentic AI
