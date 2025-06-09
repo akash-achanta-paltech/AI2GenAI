@@ -36,7 +36,7 @@ This session introduces fundamental machine learning concepts, distinguishing be
     *   **Analogy**: Training a dog to perform tricks, where correct actions are rewarded with treats.
     *   **Applications**: Robotics, game playing, autonomous driving, resource management.
 
-![Supervised vs. Unsupervised Learning vs. RL](https://www.techplayon.com/wp-content/uploads/2024/09/Machine_Learning_Types.png)
+![Supervised vs. Unsupervised Learning vs. RL](images/Machine_Learning_Types.png)
 
 #### 2. Problem Types in Supervised Learning
 *   **Classification:**
@@ -49,7 +49,7 @@ This session introduces fundamental machine learning concepts, distinguishing be
     *   **Goal**: Find the best-fitting line or curve to predict numerical outcomes.
     *   **Example**: Predicting house prices based on features like square footage and number of bedrooms, forecasting stock prices, or estimating the temperature based on various weather conditions.
 
-![Classification vs Regression](https://media.licdn.com/dms/image/v2/D5612AQHleCueKC_lww/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1677785069046?e=2147483647&v=beta&t=SltTkQoZCiyad2yR8rJpHzM_Kc0d2JpZydhvpiJBp9I)
+![Classification vs Regression](images/regvscls.png)
 
 #### 3. Unsupervised Learning Details
 Unsupervised learning focuses on discovering hidden patterns and structures in data without explicit labels. Unlike supervised learning, there's no "correct" output to guide the learning process. Instead, these algorithms work by identifying relationships, similarities, and anomalies within the dataset itself.
@@ -59,14 +59,14 @@ Unsupervised learning focuses on discovering hidden patterns and structures in d
     *   **Goal**: To discover natural groupings within data.
     *   **Example**: Segmenting customers based on purchasing behavior to tailor marketing strategies, or grouping similar documents in a large corpus.
     *   **Visual Example**:
-        ![Clustering Example](https://cdn.analyticsvidhya.com/wp-content/uploads/2020/10/56854k-means-clustering.webp)
+        ![Clustering Example](images/56854k-means-clustering.webp)
 
 *   **Dimensionality Reduction:**
     *   **Definition**: The process of reducing the number of random variables under consideration by obtaining a set of principal variables. It's often used to reduce the complexity of data for analysis, visualization, or to improve the performance of other machine learning algorithms.
     *   **Goal**: To simplify data while preserving as much meaningful variance as possible.
     *   **Example**: Reducing a dataset with hundreds of features to just a few key components for easier visualization or to speed up training of a supervised model.
     *   **Visual Example**:
-        ![PCA Example](https://lh7-rt.googleusercontent.com/docsz/AD_4nXdNbikuP2M9fZrxF_hlCeBRE4KqzZlqDjU9qfUlLIxAXXPAorOSe0VFYL3hMIyihU2NwtdfwY0QcKNS5XsCbCYrC0DUyA6tBAUtGfPGJQMI2jQeYb7u-GhlzjsG6GDqzJ28G66Fqzj6-jw8rTDtFeXtK8A?key=zkoZqw4rJh7cg9cG7yYpEA)
+        ![PCA Example](images/pca.png)
 
 *   **Anomaly Detection (Outlier Detection):**
     *   **Definition**: Identifying rare items, events, or observations which raise suspicions by differing significantly from the majority of the data.
@@ -145,9 +145,6 @@ This section covers how LLMs can be augmented for more accurate and relevant res
         4.  **Context Augmentation:** The retrieved relevant document chunks are then passed along with the original query to the LLM as additional context.
         5.  **Augmented Generation:** The LLM generates a response, *augmented* by the provided factual context, reducing hallucinations and providing more accurate, relevant, and traceable answers.
 *   **Hugging Face Platform:** A prominent open-source platform providing a vast repository of pre-trained models (including many for embeddings and LLMs), datasets, and tools that facilitate the development and deployment of NLP and RAG applications.
-
-
-
 
 #### 3. Agentic AI
 *   **Definition:** Agentic AI refers to AI systems, often powered by LLMs, that can autonomously reason, plan, and execute multi-step tasks by interacting with tools and environments. They can break down complex goals into sub-tasks and decide which actions to take.
