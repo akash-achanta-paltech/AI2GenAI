@@ -1,0 +1,1 @@
+This folder is dedicated to add all the required images and refer them in main Readme file.
