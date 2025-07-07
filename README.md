@@ -6,8 +6,32 @@ This document outlines a series of topics designed to understand key concepts in
 ![AICheatSheet](images/AICheatSheet.png)
 
 **Appendix**:
-1. [Introduction to Machine Learning Models & Architectures](#introduction-to-machine-learning-models--architectures)
-2. [Deep Dive into Transformers & LLM Architectures](#deep-dive-into-transformers--llm-architectures)
+1. [Introduction to Machine Learning Models & Architectures](#introduction-to-machine-learning-models--architectures) 
+    
+    a. [Machine Learning Concepts](#1-machine-learning-concepts)
+
+    b. [Supervised Learning](#2-supervised-learning)
+
+    c. [Unsupervised Learning](#3-unsupervised-learning)
+
+    d. [Common ML Algorithms](#4-common-machine-learning-algorithms)
+
+    e. [ML Life Cycle](#5-ml-life-cycle)
+
+    f. [Limitations](#6-limitations-of-ml-models)
+
+2. [Deep Dive into Neural Networks, Transformers & LLM Architectures](#deep-dive-into-neural-networks-transformers--llm-architectures)
+    
+    a. [Neural Networks](#1-transition-to-deep-learning--neural-networks)
+    - [Limitaitons](#deep-learning-models-limitations)
+
+    b. [Transformers](#2-transformers-the-core-of-modern-ai)
+    
+    c. [LLM Architectures](#3-llm-architectures)
+    - [Limitations](#generative-ai-genai-limitations-including-llms)
+    
+
+
 3. [Prompt Engineering, RAG & Agentic AI](#prompt-engineering-rag--agentic-ai)
 4. [AI Governance, Risks, & Data Security](#ai-governance-risks--data-security)
 
@@ -38,7 +62,7 @@ This session introduces fundamental machine learning concepts, distinguishing be
 
 ![Supervised vs. Unsupervised Learning vs. RL](images/Machine_Learning_Types.png)
 
-#### 2. Problem Types in Supervised Learning
+#### 2. Supervised Learning
 *   **Classification:**
     *   **Definition**: Predicting a *discrete* or *categorical* outcome. The model assigns input data points to predefined classes or categories.
     *   **Goal**: Assign data points to predefined classes.
@@ -51,7 +75,7 @@ This session introduces fundamental machine learning concepts, distinguishing be
 
 ![Classification vs Regression](images/regvscls.png)
 
-#### 3. Unsupervised Learning Details
+#### 3. Unsupervised Learning
 Unsupervised learning focuses on discovering hidden patterns and structures in data without explicit labels. Unlike supervised learning, there's no "correct" output to guide the learning process. Instead, these algorithms work by identifying relationships, similarities, and anomalies within the dataset itself.
 
 *   **Clustering:**
@@ -80,9 +104,30 @@ Unsupervised learning focuses on discovering hidden patterns and structures in d
 
 #### 5. ML Life Cycle
 ![alt text](images/mllifecycle.jpeg)
+
+
+#### 6. Limitations of ML Models
+Traditional ML models often rely on well-defined features engineered by humans. Their limitations stem from this dependency and their approach to learning.
+
+*   **Feature Engineering Dependency:**
+    *   **Limitation:** ML models are only as good as the features they are fed. If key features are missing, irrelevant, or poorly represented, the model's performance will suffer significantly. This requires extensive domain expertise and manual effort.
+    *   **Example:** A traditional ML model for predicting house prices might require manually inputting features like "number of bedrooms," "square footage," "zip code," etc. If the quality of these features is poor, or if crucial ones like "proximity to good schools" are omitted, the prediction accuracy will be limited.
+
+*   **Scalability Issues with Complex Data:**
+    *   **Limitation:** While ML can handle structured data well, it can struggle with unstructured or highly complex data (like raw text, images, or audio) without significant pre-processing and feature extraction, which can be cumbersome and computationally expensive.
+    *   **Example:** Applying a traditional ML classifier to raw images would require manually designing algorithms to detect edges, shapes, and colors before feeding them into the classifier.
+
+*   **Limited Ability to Understand Context and Nuance:**
+    *   **Limitation:** Traditional ML models often operate on statistical patterns within the engineered features. They lack the deep contextual understanding and nuanced interpretation that can be crucial for tasks involving natural language or complex relationships.
+    *   **Example:** A traditional ML model might struggle to differentiate between sarcasm and a genuine statement in text, as it might not capture the subtle contextual cues or sentiment shifts.
+
+*   **Interpretability vs. Performance Trade-off:**
+    *   **Limitation:** While some traditional ML models (like linear regression or decision trees) are highly interpretable, more powerful ones (like ensemble methods) can become "black boxes," making it difficult to understand *why* a particular prediction was made.
+    *   **Example:** It's easy to understand how a decision tree arrives at a prediction based on a series of if-then rules. However, understanding the decision process of a Random Forest with thousands of trees can be very challenging.
+
 ---
 
-## Deep Dive into Transformers & LLM Architectures
+## Deep Dive into Neural Networks, Transformers & LLM Architectures
 
 ### Overview
 This section transitions into deep learning, focusing on the Transformer architecture, which is foundational to modern Large Language Models (LLMs), and exploring different LLM architectural patterns.
@@ -150,6 +195,32 @@ This section transitions into deep learning, focusing on the Transformer archite
 *   **The Need for Transformers:**
     While RNNs were a breakthrough for sequential data, their limitations, particularly with long-term dependencies and parallel processing, paved the way for a revolutionary new architecture: the Transformer. The Transformer, as we'll explore next, overcomes these challenges by entirely replacing the recurrent mechanism with a powerful "self-attention" mechanism.
 
+
+##### Deep Learning Models Limitations
+
+Deep Learning, by leveraging neural networks, overcomes some traditional ML limitations by automatically learning features. However, it introduces its own set of challenges.
+
+*   **Data Hungriness:**
+    *   **Limitation:** DL models, especially those with many layers, require enormous amounts of labeled data to train effectively. Insufficient data leads to poor generalization and overfitting.
+    *   **Example:** Training a state-of-the-art image recognition model from scratch would require millions of labeled images.
+
+*   **Computational Intensity & Resource Requirements:**
+    *   **Limitation:** Training deep neural networks is computationally very expensive, requiring powerful hardware (GPUs, TPUs) and significant time. This can be a barrier to entry and high-cost for deployment.
+    *   **Example:** Training a large language model like GPT-3 can take weeks or months on specialized supercomputers.
+
+*   **"Black Box" Nature & Lack of Explainability (More Pronounced than some ML):**
+    *   **Limitation:** While DL models can achieve incredible performance, their internal workings are often opaque. Understanding precisely *why* a specific decision was made is exceptionally difficult, making debugging and building trust challenging.
+    *   **Example:** A DL model might accurately diagnose a disease from a medical image, but explaining the exact visual cues or reasoning behind that diagnosis to a doctor can be impossible.
+
+*   **Susceptibility to Adversarial Attacks:**
+    *   **Limitation:** DL models can be fooled by subtle, imperceptible changes to input data (adversarial examples) that cause them to make incorrect predictions with high confidence.
+    *   **Example:** Slightly altering a few pixels in an image of a stop sign can cause a self-driving car's DL model to misclassify it as a speed limit sign.
+
+*   **Catastrophic Forgetting:**
+    *   **Limitation:** When a DL model is trained on a new task, it can often forget or degrade its performance on previously learned tasks, especially if the new data is very different.
+    *   **Example:** A DL model trained to identify cats and dogs might, after being trained on birds, completely lose its ability to correctly identify cats.
+
+
 #### 2. Transformers: The Core of Modern AI
 *   **A Bit In-depth Architecture:**
     ![alt text](images/transformers.png)
@@ -173,6 +244,36 @@ This section transitions into deep learning, focusing on the Transformer archite
     *   **Characteristics:** These models combine the strengths of both encoders and decoders, making them suitable for sequence-to-sequence tasks where input and output sequences are distinct.
     *   **Examples:** T5 (Text-to-Text Transfer Transformer), BART, Pegasus.
     *   **Use Cases:** Machine translation, abstractive summarization (generating new summaries rather than just extracting sentences), dialogue systems, structured data generation.
+
+
+##### Generative AI (GenAI) Limitations (including LLMs)
+
+Generative AI, while revolutionary in creating new content, inherits many DL limitations and introduces its own unique set of challenges related to creativity, control, and alignment.
+
+*   **Hallucinations & Factual Inaccuracy:**
+    *   **Limitation:** GenAI models, particularly LLMs, can confidently generate plausible-sounding but factually incorrect, nonsensical, or fabricated information. They do not inherently "know" truth; they predict statistically probable sequences.
+    *   **Example:** An LLM might confidently generate a detailed but entirely false historical event or cite a non-existent scientific paper.
+
+*   **Bias Amplification and Propagation:**
+    *   **Limitation:** Because GenAI models learn from vast amounts of internet data, they inevitably absorb and can amplify existing societal biases present in that data (e.g., gender, racial, or cultural stereotypes).
+    *   **Example:** A text-to-image model might disproportionately depict certain professions with specific genders or ethnicities if the training data reflects those biases. An LLM might generate biased descriptions or recommendations.
+
+*   **Lack of True Understanding, Common Sense, and Sentience:**
+    *   **Limitation:** GenAI models are sophisticated pattern-matching machines; they don't possess genuine consciousness, common sense reasoning, or the ability to truly understand the world as humans do. Their "knowledge" is statistical.
+    *   **Example:** An LLM can write a convincing poem about sadness but doesn't *feel* sadness. It might struggle with a common-sense physics problem that a child could solve.
+
+*   **Controllability and Predictability:**
+    *   **Limitation:** Guiding the output of GenAI models to be consistently safe, accurate, and aligned with specific requirements can be challenging. Prompt engineering helps, but it's not a foolproof solution for all scenarios.
+    *   **Example:** While you can ask an LLM to "write a story about a happy dog," it can be hard to guarantee it will avoid any slightly negative undertones or unexpected turns if not carefully prompted and guarded.
+
+*   **Ethical Concerns (Misinformation, Misuse, Copyright):**
+    *   **Limitation:** The power of GenAI can be misused to create deepfakes, spread misinformation at scale, generate harmful content, or infringe on copyrights by producing outputs too similar to existing works.
+    *   **Example:** Using an LLM to generate persuasive but false political propaganda or creating AI-generated art that closely mimics a living artist's style without permission.
+
+*   **Context Window Limitations (Still Relevant):**
+    *   **Limitation:** Even with larger context windows, GenAI models have finite memory. They can still lose track of information in very long conversations or extremely large documents, impacting coherence and accuracy.
+    *   **Example:** An LLM might forget earlier details of a complex, multi-turn dialogue or fail to synthesize information from a very long research paper if it exceeds its processing capacity.
+
 
 ---
 
@@ -224,6 +325,10 @@ This section covers how LLMs can be augmented for more accurate and relevant res
     *   **Self-Correction/Reflection:** The capacity to evaluate their own progress, identify errors, and adjust their plans accordingly.
 *   **How they work:** An LLM typically serves as the central "brain" of the agent, responsible for interpreting the user's goal, planning steps, deciding which tools to use, and integrating the results. This often involves a "thought-action-observation" loop.
 *   **Reference Link:** A good starting point for understanding agents and their capabilities can be found in discussions around frameworks like LangChain or concepts like ReAct: [https://www.latent.space/p/llm-agents](https://www.latent.space/p/llm-agents)
+
+##### 3A. MCP
+
+##### 3B. Google A2A
 
 ---
 
