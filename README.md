@@ -104,7 +104,7 @@ Unsupervised learning focuses on discovering hidden patterns and structures in d
 
 #### 4. Common Machine Learning Algorithms
 
-[ML Algorithms](./algorithms/ml/ReadMe.md)
+[ML Algorithms](./algorithms/ml/README.md)
 
 
 #### 5. ML Life Cycle
