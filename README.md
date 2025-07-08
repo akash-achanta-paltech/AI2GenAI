@@ -33,6 +33,11 @@ This document outlines a series of topics designed to understand key concepts in
 
 
 3. [Prompt Engineering, RAG & Agentic AI](#prompt-engineering-rag--agentic-ai)
+
+    a. [MCP](#3a-mcp---model-context-protocol)
+
+    b. [Google A2A](#3b-google-a2a)
+
 4. [AI Governance, Risks, & Data Security](#ai-governance-risks--data-security)
 
 
