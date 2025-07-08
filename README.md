@@ -147,6 +147,8 @@ This section transitions into deep learning, focusing on the Transformer archite
     *   **Visual Explanation:**
         *   For a simple explanation: 📺 [Explained In A Minute: Neural Networks](https://www.youtube.com/watch?v=rEDzUT3ymw4)
 
+    * **Playground**: [Train Neural Network](https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=4,2&seed=0.33925&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false)
+
     *   **Core Keywords in Deep Learning:**
         *   **Weights:**
             *   **Concept:** Numerical values associated with the connections between neurons. They represent the "strength" or "importance" of each input signal as it passes through the network. The network learns by continuously adjusting these weights during training.
@@ -326,9 +328,44 @@ This section covers how LLMs can be augmented for more accurate and relevant res
 *   **How they work:** An LLM typically serves as the central "brain" of the agent, responsible for interpreting the user's goal, planning steps, deciding which tools to use, and integrating the results. This often involves a "thought-action-observation" loop.
 *   **Reference Link:** A good starting point for understanding agents and their capabilities can be found in discussions around frameworks like LangChain or concepts like ReAct: [https://www.latent.space/p/llm-agents](https://www.latent.space/p/llm-agents)
 
-##### 3A. MCP
+##### 3A. MCP - Model Context Protocol
+
+Give AI agents a consistent way to connect with tools, services, and data — no matter where they live or how they’re built.
+
+![MCP](./images/mcp.gif)
+
+Before MCP vs After
+
+![MCP](./images/mcp.webp)
+
+Traditional APIs vs MCP
+![alt text](./images/mcpvsapi.webp)
+
+Ref. Link: [🧑🏻‍💻 MCP Explained](https://medium.com/@elisowski/mcp-explained-the-new-standard-connecting-ai-to-everything-79c5a1c98288)
 
 ##### 3B. Google A2A
+![alt text](./images/mcpvsa2a.gif)
+
+Let’s say you’re building a multi-agent system to summarize breaking news and publish digestible updates across multiple platforms. You’ve got a fleet of AI agents, each with its own specialty:
+
+- **Agent A (News Scraper + Search Tool)**: Scans multiple RSS feeds, indexed news APIs, and even open web content for trending headlines and stories. It performs semantic search and keyword extraction to detect breaking news.
+- **Agent B (Summarizer)**: Takes raw article content, strips out boilerplate, and uses a transformer-based model (like T5 or GPT) to generate concise summaries, optimized for mobile reading or Twitter threads.
+- **Agent C (Distribution Manager)**: Decides how to format and publish the summaries to various platforms like email newsletters, social media, or in-app notifications, based on audience segmentation and past engagement data.
+
+Here’s the challenge: these agents are great at what they do, but they don’t naturally **speak the same language.**
+
+**Enter Google’s A2A Protocol.**
+
+With A2A, each agent follows a **shared schema** and messaging flow.
+So instead of Agent A throwing raw data over the wall and hoping for the best:
+
+- Agent A emits a NewStoryDetected message with fields like title, source, content, and tags.
+- Agent B listens for this message type and knows exactly how to parse it—thanks to the A2A spec. It replies with a StorySummaryReady event containing a human-readable summary, along with estimated reading time, tone analysis, and compression score.
+- Agent C is subscribed to StorySummaryReady events and checks publishing rules. It responds with a DistributionAction event that triggers publishing across the correct channels, with minimal code orchestration needed.
+
+Instead of custom APIs and glue code between every component, the A2A Protocol acts as the universal handshake—a shared language that keeps the entire pipeline clean, modular, and scalable.
+
+Ref. Link: [🤖 Google's A2A](https://learnopencv.com/googles-a2a-protocol-heres-what-you-need-to-know/)
 
 ---
 
