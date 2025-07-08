@@ -178,9 +178,6 @@ This section transitions into deep learning, focusing on the Transformer archite
         *   **Visual Explanation:**
             *   For a clear conceptual understanding: [Recurrent Neural Network Tutorial IBM](https://www.ibm.com/cloud/blog/recurrent-neural-networks-tutorial)
 
-*   **The Need for Transformers:**
-    While RNNs were a breakthrough for sequential data, their limitations, particularly with long-term dependencies and parallel processing, paved the way for a revolutionary new architecture: the Transformer. The Transformer, as we'll explore next, overcomes these challenges by entirely replacing the recurrent mechanism with a powerful "self-attention" mechanism.
-
 
 ##### Deep Learning Models Limitations
 
@@ -206,6 +203,7 @@ Deep Learning, by leveraging neural networks, overcomes some traditional ML limi
     *   **Limitation:** When a DL model is trained on a new task, it can often forget or degrade its performance on previously learned tasks, especially if the new data is very different.
     *   **Example:** A DL model trained to identify cats and dogs might, after being trained on birds, completely lose its ability to correctly identify cats.
 
+**The Need for Transformers:** While RNNs were a breakthrough for sequential data, their limitations, particularly with long-term dependencies and parallel processing, paved the way for a revolutionary new architecture: the Transformer. The Transformer, as we'll explore next, overcomes these challenges by entirely replacing the recurrent mechanism with a powerful "self-attention" mechanism.
 
 #### 2. Transformers: The Core of Modern AI
 *   **A Bit In-depth Architecture:**
