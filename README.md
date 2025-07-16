@@ -12,7 +12,7 @@ A. [Introduction to Machine Learning Models & Architectures](#introduction-to-ma
 1. [Machine Learning Concepts](#1-machine-learning-concepts)
 2. [Supervised Learning](#2-supervised-learning)
 3. [Unsupervised Learning](#3-unsupervised-learning)
-4. [Examples](#4-example-dataset)
+4. [Example Dataset](#4-example-dataset)
 5. [Common ML Algorithms](#5-common-algorithms)
 6. [ML Life Cycle](#6-ml-life-cycle)
 7. [Limitations](#7-limitations-of-ml-models)
@@ -28,8 +28,9 @@ C. [Prompt Engineering, RAG & Agentic AI](#prompt-engineering-rag--agentic-ai)
 1. [Prompt Engineering](#1-prompt-engineering)
 2. [RAG](#2-retrieval-augmented-generation-rag)
 3. [Agentic AI](#3-agentic-ai)
-    - [MCP](#3a-mcp---model-context-protocol)
-    - [Google A2A](#3b-google-a2a)
+    - [MCP](#a-mcp---model-context-protocol)
+    - [Google A2A](#b-google-a2a)
+    - [MCP vs A2A](#c-a2a-vs-mcp)
 
 D. [AI Governance, Risks, & Data Security](#ai-governance-risks--data-security)
 
@@ -328,7 +329,7 @@ This section covers how LLMs can be augmented for more accurate and relevant res
 *   **How they work:** An LLM typically serves as the central "brain" of the agent, responsible for interpreting the user's goal, planning steps, deciding which tools to use, and integrating the results. This often involves a "thought-action-observation" loop.
 *   **Reference Link:** A good starting point for understanding agents and their capabilities can be found in discussions around frameworks like LangChain or concepts like ReAct: [https://www.latent.space/p/llm-agents](https://www.latent.space/p/llm-agents)
 
-##### 3A. MCP - Model Context Protocol
+##### A. MCP - Model Context Protocol
 
 Give AI agents a consistent way to connect with tools, services, and data — no matter where they live or how they’re built.
 
@@ -343,7 +344,7 @@ Traditional APIs vs MCP
 
 Ref. Link: [🧑🏻‍💻 MCP Explained](https://medium.com/@elisowski/mcp-explained-the-new-standard-connecting-ai-to-everything-79c5a1c98288)
 
-##### 3B. Google A2A
+##### B. Google A2A
 ![alt text](./images/a2a-prtotcol-agents-workflow.webp)
 
 Let’s say you’re building a multi-agent system to summarize breaking news and publish digestible updates across multiple platforms. You’ve got a fleet of AI agents, each with its own specialty:
