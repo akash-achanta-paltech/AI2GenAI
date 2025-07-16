@@ -13,9 +13,9 @@ A. [Introduction to Machine Learning Models & Architectures](#introduction-to-ma
 2. [Supervised Learning](#2-supervised-learning)
 3. [Unsupervised Learning](#3-unsupervised-learning)
 4. [Examples](#4-example-dataset)
-5. [Common ML Algorithms](#5-common-machine-learning-algorithms)
-6. [ML Life Cycle](#5-ml-life-cycle)
-7. [Limitations](#6-limitations-of-ml-models)
+5. [Common ML Algorithms](#5-common-algorithms)
+6. [ML Life Cycle](#6-ml-life-cycle)
+7. [Limitations](#7-limitations-of-ml-models)
 
 B. [Deep Dive into Neural Networks, Transformers & LLM Architectures](#deep-dive-into-neural-networks-transformers--llm-architectures)
 1. [Neural Networks](#1-transition-to-deep-learning--neural-networks)
@@ -99,7 +99,7 @@ Unsupervised learning focuses on discovering hidden patterns and structures in d
 
 **Scenario:** A Telecommunications Company wants to understand its customers better to reduce churn and identify different customer groups for targeted marketing.
 
-**Unified Dataset: `telecom_customer_data.csv`**
+**Unified Dataset: `customer_data.csv`**
 
 | CustomerID | TenureMonths | MonthlyCharges | TotalCharges | ContractType | PaymentMethod | InternetService | DeviceProtection | Churn |
 |---|---|---|---|---|---|---|---|---|
