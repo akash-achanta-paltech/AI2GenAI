@@ -104,8 +104,31 @@ Unsupervised learning focuses on discovering hidden patterns and structures in d
 
 #### 4. Common Machine Learning Algorithms
 
-[ML Algorithms](./algorithms/ml/README.md)
+a. [ML Algorithms](./algorithms/ml/README.md)
 
+b. Example Dataset
+
+**Scenario:** A Telecommunications Company wants to understand its customers better to reduce churn and identify different customer groups for targeted marketing.
+
+**Unified Dataset: `telecom_customer_data.csv`**
+
+| CustomerID | TenureMonths | MonthlyCharges | TotalCharges | ContractType | PaymentMethod | InternetService | DeviceProtection | Churn |
+|---|---|---|---|---|---|---|---|---|
+| 0001-XYZ | 1 | 29.85 | 29.85 | Month-to-month | Electronic check | DSL | No internet service | High Churn Risk | 
+| 0002-ABC | 34 | 56.95 | 1889.50 | One year | Mail check | Fiber optic | Yes | High Churn Risk | 
+| 0003-QWE | 2 | 53.85 | 108.15 | Month-to-month | Electronic check | DSL | No | High Churn Risk | 
+| 0004-RTY | 45 | 42.30 | 1840.75 | One year | Bank transfer (automatic) | DSL | Yes | Low Churn Risk | 
+| 0005-UIO | 2 | 70.70 | 151.65 | Month-to-month | Credit card (automatic) | Fiber optic | No | Medium Churn Risk | 
+| 0006-ASD | 10 | 99.65 | 1024.50 | Month-to-month | Electronic check | Fiber optic | Yes | Low Churn Risk | 
+| 0007-FGH | 62 | 104.20 | 6479.90 | Two year | Bank transfer (automatic) | Fiber optic | Yes | Medium Churn Risk | 
+| 0008-JKL | 13 | 56.15 | 701.15 | Month-to-month | Credit card (automatic) | DSL | No | Low Churn Risk | 
+| 0009-ZXCV | 72 | 19.70 | 1397.20 | Two year | Mail check | No internet service | No internet service | Medium Churn Risk | 
+| 0010-BNMK | 1 | 90.05 | 90.05 | Month-to-month | Electronic check | Fiber optic | No | High Churn Risk | 
+| ... | ... | ... | ... | ... | ... | ... | ... | ... |
+
+Trained Models:
+
+![alt text](./images/sl_usl.png)
 
 #### 5. ML Life Cycle
 ![alt text](./images/mllifecycle.jpeg)
@@ -262,7 +285,7 @@ Generative AI, while revolutionary in creating new content, inherits many DL lim
 ---
 
 ## Prompt Engineering, RAG, & Agentic AI
-
+📊
 ### Overview
 This section covers how LLMs can be augmented for more accurate and relevant responses (RAG), the art of crafting effective prompts, and the emerging field of Agentic AI.
 
