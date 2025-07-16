@@ -344,7 +344,7 @@ Traditional APIs vs MCP
 Ref. Link: [🧑🏻‍💻 MCP Explained](https://medium.com/@elisowski/mcp-explained-the-new-standard-connecting-ai-to-everything-79c5a1c98288)
 
 ##### 3B. Google A2A
-![alt text](./images/mcpvsa2a.gif)
+![alt text](./images/a2a-prtotcol-agents-workflow.webp)
 
 Let’s say you’re building a multi-agent system to summarize breaking news and publish digestible updates across multiple platforms. You’ve got a fleet of AI agents, each with its own specialty:
 
@@ -366,6 +366,10 @@ So instead of Agent A throwing raw data over the wall and hoping for the best:
 Instead of custom APIs and glue code between every component, the A2A Protocol acts as the universal handshake—a shared language that keeps the entire pipeline clean, modular, and scalable.
 
 Ref. Link: [🤖 Google's A2A](https://learnopencv.com/googles-a2a-protocol-heres-what-you-need-to-know/)
+
+
+##### c. A2A vs MCP
+![alt text](./images/a2avsmcp.gif) 
 
 ---
 
