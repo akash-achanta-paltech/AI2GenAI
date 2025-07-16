@@ -6,39 +6,32 @@ This document outlines a series of topics designed to understand key concepts in
 ![AICheatSheet](images/AICheatSheet.png)
 
 **Appendix**:
-1. [Introduction to Machine Learning Models & Architectures](#introduction-to-machine-learning-models--architectures) 
+
+A. [Introduction to Machine Learning Models & Architectures](#introduction-to-machine-learning-models--architectures) 
     
-    a. [Machine Learning Concepts](#1-machine-learning-concepts)
+1. [Machine Learning Concepts](#1-machine-learning-concepts)
+2. [Supervised Learning](#2-supervised-learning)
+3. [Unsupervised Learning](#3-unsupervised-learning)
+4. [Examples](#4-example-dataset)
+5. [Common ML Algorithms](#5-common-machine-learning-algorithms)
+6. [ML Life Cycle](#5-ml-life-cycle)
+7. [Limitations](#6-limitations-of-ml-models)
 
-    b. [Supervised Learning](#2-supervised-learning)
-
-    c. [Unsupervised Learning](#3-unsupervised-learning)
-
-    d. [Common ML Algorithms](#4-common-machine-learning-algorithms)
-
-    e. [ML Life Cycle](#5-ml-life-cycle)
-
-    f. [Limitations](#6-limitations-of-ml-models)
-
-2. [Deep Dive into Neural Networks, Transformers & LLM Architectures](#deep-dive-into-neural-networks-transformers--llm-architectures)
-    
-    a. [Neural Networks](#1-transition-to-deep-learning--neural-networks)
+B. [Deep Dive into Neural Networks, Transformers & LLM Architectures](#deep-dive-into-neural-networks-transformers--llm-architectures)
+1. [Neural Networks](#1-transition-to-deep-learning--neural-networks)
     - [Limitaitons](#deep-learning-models-limitations)
-
-    b. [Transformers](#2-transformers-the-core-of-modern-ai)
-    
-    c. [LLM Architectures](#3-llm-architectures)
+2. [Transformers](#2-transformers-the-core-of-modern-ai)
+3. [LLM Architectures](#3-llm-architectures)
     - [Limitations](#generative-ai-genai-limitations-including-llms)
-    
 
+C. [Prompt Engineering, RAG & Agentic AI](#prompt-engineering-rag--agentic-ai)
+1. [Prompt Engineering](#1-prompt-engineering)
+2. [RAG](#2-retrieval-augmented-generation-rag)
+3. [Agentic AI](#3-agentic-ai)
+    - [MCP](#3a-mcp---model-context-protocol)
+    - [Google A2A](#3b-google-a2a)
 
-3. [Prompt Engineering, RAG & Agentic AI](#prompt-engineering-rag--agentic-ai)
-
-    a. [MCP](#3a-mcp---model-context-protocol)
-
-    b. [Google A2A](#3b-google-a2a)
-
-4. [AI Governance, Risks, & Data Security](#ai-governance-risks--data-security)
+D. [AI Governance, Risks, & Data Security](#ai-governance-risks--data-security)
 
 
 ---
@@ -102,11 +95,7 @@ Unsupervised learning focuses on discovering hidden patterns and structures in d
     *   **Goal**: To find data points that do not conform to expected behavior.
     *   **Example**: Detecting fraudulent credit card transactions, identifying unusual network intrusions, or pinpointing defective products on an assembly line.
 
-#### 4. Common Machine Learning Algorithms
-
-a. [ML Algorithms](./algorithms/ml/README.md)
-
-b. Example Dataset
+#### 4. Example Dataset
 
 **Scenario:** A Telecommunications Company wants to understand its customers better to reduce churn and identify different customer groups for targeted marketing.
 
@@ -130,11 +119,17 @@ Trained Models:
 
 ![alt text](./images/sl_usl.png)
 
-#### 5. ML Life Cycle
+
+
+#### 5. Common Algorithms
+[ML Algorithms](./algorithms/ml/README.md)
+
+
+#### 6. ML Life Cycle
 ![alt text](./images/mllifecycle.jpeg)
 
 
-#### 6. Limitations of ML Models
+#### 7. Limitations of ML Models
 Traditional ML models often rely on well-defined features engineered by humans. Their limitations stem from this dependency and their approach to learning.
 
 *   **Feature Engineering Dependency:**
